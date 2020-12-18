@@ -1,18 +1,14 @@
 {
   "name": "frontend",
   "version": "0.0.0",
-  "engine": {
-    "node": "12.0.0",
-    "npm": "6.9.0"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "jest",
+    "test": "ng test",
     "lint": "ng lint",
-    "e2e": "cypress open",
-    "postbuild": "ng build --aot --prod"
+    "e2e": "ng e2e",
+    "postbuild": "gulp compress"
   },
   "private": true,
   "dependencies": {
@@ -26,10 +22,9 @@
     "@angular/router": "~10.1.4",
     "chart.js": "^2.9.4",
     "d3": "^6.3.1",
-    "express": "^4.17.1",
     "gulp-compress": "0.0.9",
     "jwt-decode": "^3.1.2",
-    "path": "^0.12.7",
+    "node-engine": "0.0.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -43,8 +38,9 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
-    "enhanced-resolve": "~3.6.0",
-   "jasmine-core": "~3.6.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
